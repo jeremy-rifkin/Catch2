@@ -1,0 +1,3 @@
+add_executable(benchmarks catch_benchmarks.cpp)
+target_link_libraries(benchmarks PRIVATE Catch2WithMain)
+target_compile_features(benchmarks PUBLIC cxx_std_17)
