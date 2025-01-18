@@ -481,7 +481,7 @@ set_tests_properties(
 
 add_executable(Multithreading ${TESTS_DIR}/X37-Multithreading.cpp)
 target_link_libraries(Multithreading PRIVATE Catch2::Catch2WithMain)
-target_compile_features(Multithreading PRIVATE cxx_std_20)
+target_compile_features(Multithreading PRIVATE cxx_std_11)
 add_test(
   NAME Reporters::Multithreading
   COMMAND ${CMAKE_COMMAND} -E env $<TARGET_FILE:Multithreading>
