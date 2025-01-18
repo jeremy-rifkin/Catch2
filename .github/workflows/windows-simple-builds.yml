@@ -29,6 +29,9 @@ jobs:
         run: cmake --build build --config ${{matrix.build_type}} --parallel %NUMBER_OF_PROCESSORS%
         shell: cmd
 
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
+
       - name: Run tests
         working-directory: ${{runner.workspace}}/build
         env:
